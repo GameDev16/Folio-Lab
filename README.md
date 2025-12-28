@@ -1,36 +1,22 @@
 # FolioLab – Portfolio Builder
 
-A schema-driven, client-side static portfolio website generator. Select a template, fill your details, and download a ready-to-host website.
+A simple, offline-capable portfolio builder that generates clean HTML/CSS websites you can host anywhere.
 
-*A simpler way to stand out.*
+🌐 **Live Demo:** [foliolab.netlify.app](https://foliolab.netlify.app)
 
-![FolioLab](https://img.shields.io/badge/Version-1.0.0-22d3ee) ![License](https://img.shields.io/badge/License-MIT-green)
+---
 
 ## ✨ Features
 
-- **No Backend Required** – 100% client-side, runs entirely in the browser
-- **Schema-Driven** – Templates define their own form fields via `schema.json`
+- **8 Professional Templates** – Designed for students, developers, and designers
+- **100% Offline** – Works without internet after initial load
+- **No Framework Lock-in** – Pure HTML/CSS output you own forever
 - **Live Preview** – See changes in real-time as you fill the form
-- **ZIP Export** – Download a complete, ready-to-deploy website
-- **LocalStorage** – Your progress is saved automatically
-- **Clean Code** – Pure HTML/CSS output you can customize forever
-- **Responsive** – All templates are mobile-friendly
+- **One-Click Download** – Get a ready-to-deploy ZIP file
+- **Mobile Responsive** – All templates work on any device
+- **Smart URL Handling** – Enter username or full URL for social links
 
-## 🚀 Quick Start
-
-1. Open `index.html` in your browser (or use a local server)
-2. Browse available templates
-3. Select a template and fill in your details
-4. Preview your portfolio in real-time
-5. Download the ZIP and deploy anywhere!
-
-```bash
-# Using Python's built-in server
-python -m http.server 8000
-
-# Or using Node's http-server
-npx http-server
-```
+---
 
 ## 📁 Project Structure
 
@@ -38,126 +24,191 @@ npx http-server
 portfolio-builder/
 ├── index.html              # Landing page
 ├── template.html           # Template gallery
-├── builder.html            # Portfolio builder
+├── builder.html            # Form builder page
 ├── css/
-│   └── main.css            # Main stylesheet
+│   └── main.css            # Global styles
 ├── js/
-│   ├── templates.js        # Template registry
-│   ├── gallery.js          # Gallery page logic
-│   └── builder.js          # Builder logic (form, preview, export)
-└── templates/
-    ├── developer/          # Developer Pro template
-    │   ├── schema.json     # Form field definitions
-    │   ├── template.html   # HTML with placeholders
-    │   └── styles.css      # Template styles
-    ├── designer/           # Creative Studio template
-    │   ├── schema.json
-    │   ├── template.html
-    │   └── styles.css
-    └── minimal/            # Clean Slate template
-        ├── schema.json
-        ├── template.html
-        └── styles.css
+│   ├── templates.js        # Template registry & schemas
+│   ├── template-data.js    # Embedded template HTML/CSS
+│   ├── gallery.js          # Template gallery functionality
+│   └── builder.js          # Form builder & export logic
+├── templates/
+│   ├── student-starter/    # Orange accent, activity cards
+│   ├── student-sidebar/    # Blue accent, clean sidebar
+│   ├── developer-starter/  # Purple accent, experience focus
+│   ├── developer-dark/     # GitHub-style dark theme
+│   ├── developer-terminal/ # Retro terminal aesthetic
+│   ├── designer-studio/    # Gold accent, hero header layout
+│   ├── designer-minimal/   # Typography-focused, top nav
+│   └── multipurpose/       # Teal accent, multi-section
+└── assets/
+    └── logo.png            # FolioLab logo
 ```
+
+---
 
 ## 🎨 Available Templates
 
 | Template | Category | Description |
 |----------|----------|-------------|
-| **Developer Pro** | Developer | Modern dark theme for software engineers |
-| **Creative Studio** | Designer | Elegant, gallery-style for creatives |
-| **Clean Slate** | Minimal | Typography-focused for any professional |
-
-## 🔧 How It Works
-
-### Schema-Driven Forms
-
-Each template includes a `schema.json` that defines form fields:
-
-```json
-{
-  "name": "Template Name",
-  "fields": [
-    {
-      "name": "fullName",
-      "label": "Full Name",
-      "type": "text",
-      "required": true,
-      "section": "Personal Info"
-    },
-    {
-      "name": "projects",
-      "label": "Projects",
-      "type": "repeater",
-      "fields": [
-        { "name": "projectName", "type": "text" },
-        { "name": "projectDescription", "type": "textarea" }
-      ]
-    }
-  ]
-}
-```
-
-### Placeholder Syntax
-
-Templates use Mustache-style placeholders:
-
-```html
-<!-- Simple placeholder -->
-<h1>{{fullName}}</h1>
-
-<!-- Repeater/loop -->
-{{#projects}}
-<div class="project">
-  <h3>{{projectName}}</h3>
-  <p>{{projectDescription}}</p>
-</div>
-{{/projects}}
-```
-
-## 📦 Adding New Templates
-
-1. Create a new folder in `templates/`
-2. Add the required files:
-   - `schema.json` – Form field definitions
-   - `template.html` – HTML with placeholders
-   - `styles.css` – Template styles
-3. Register the template in `js/templates.js`
-
-```javascript
-const TEMPLATES = {
-    // ...existing templates
-    mytemplate: {
-        id: 'mytemplate',
-        name: 'My Template',
-        category: 'custom',
-        description: 'Description here',
-        path: 'templates/mytemplate/'
-    }
-};
-```
-
-## 🌐 Deployment
-
-The generated portfolio is a static site. Deploy it anywhere:
-
-- **Netlify** – Drag & drop at [netlify.com/drop](https://app.netlify.com/drop)
-- **Vercel** – Import at [vercel.com/new](https://vercel.com/new)
-- **GitHub Pages** – Push to repo, enable Pages in settings
-- **Any Web Host** – Just upload the files
-
-## 🛠️ Tech Stack
-
-- **HTML5** – Semantic markup
-- **CSS3** – Modern styling with CSS Variables
-- **Vanilla JavaScript (ES6+)** – No frameworks
-- **JSZip** – ZIP file generation
-- **Google Fonts** – Typography
-
-## 📄 License
-
-MIT License – feel free to use, modify, and distribute.
+| **Student Starter** | Student | Sidebar layout with orange accents and activity cards |
+| **Student Sidebar** | Student | Clean blue sidebar with minimal design |
+| **Developer Starter** | Developer | Light theme with purple accents, experience section |
+| **Developer Dark** | Developer | GitHub-inspired dark theme |
+| **Developer Terminal** | Developer | Retro terminal/command-line aesthetic |
+| **Designer Studio** | Designer | Elegant hero header with gold accents and timeline |
+| **Designer Minimal** | Designer | Typography-focused with top navigation |
+| **Multipurpose** | Multipurpose | Versatile teal theme for any profession |
 
 ---
 
-Built with ❤️ by FolioLab
+## 🚀 Getting Started
+
+### Option 1: Use Online
+Visit [foliolab.netlify.app](https://foliolab.netlify.app) and start building!
+
+### Option 2: Run Locally
+1. Download or clone this repository
+2. Open `index.html` in your browser
+3. No server required – works directly from file system
+
+### Option 3: Self-Host
+Deploy the entire folder to any static hosting:
+- **Netlify** – Drag & drop the folder
+- **Vercel** – Import from GitHub
+- **GitHub Pages** – Push to `gh-pages` branch
+- **Any web server** – Just upload the files
+
+---
+
+## 📝 How to Use
+
+1. **Choose a Template** – Browse the gallery and pick a design
+2. **Fill Your Details** – Complete the form with your information
+3. **Preview** – Click "Preview" to see your portfolio
+4. **Download** – Click "Download ZIP" to get your files
+5. **Deploy** – Upload the ZIP contents to any hosting service
+
+---
+
+## 🔧 Form Fields
+
+### Required Fields (All Templates)
+- Profile Photo
+- Full Name
+- Email
+- Date of Birth
+- Tagline
+- About Me / Bio
+- Education (with Start Year & End Year)
+- Skills
+- Tools
+
+### Optional Fields (Vary by Template)
+- Location
+- Job Title
+- GitHub Profile URL
+- LinkedIn Profile URL
+- Dribbble Profile URL
+- Website URL
+- Projects
+- Experience
+- Contact Message
+
+### Social Links
+Enter either format – the builder handles both:
+- Username: `GameDev16`
+- Full URL: `https://github.com/GameDev16`
+
+The portfolio displays the username but links to the full URL.
+
+---
+
+## 📦 Output Structure
+
+When you download your portfolio, you get:
+
+```
+your-portfolio/
+├── index.html    # Your portfolio page
+└── styles.css    # All styling
+```
+
+That's it! Two files, ready to deploy anywhere.
+
+---
+
+## 🛠️ Customization
+
+### After Download
+The exported HTML/CSS is fully editable:
+- Change colors in `styles.css` (look for CSS variables at the top)
+- Modify content directly in `index.html`
+- Add new sections as needed
+
+### Template Development
+To create a new template:
+1. Create a folder in `templates/` with your template ID
+2. Add `template.html`, `styles.css`, and `schema.json`
+3. Register the template in `js/templates.js`
+4. Run the template data generator to embed it
+
+---
+
+## 🌐 Deployment Guide
+
+### Netlify (Recommended)
+1. Download your portfolio ZIP
+2. Extract the files
+3. Go to [netlify.com](https://netlify.com)
+4. Drag & drop the folder
+5. Your site is live!
+
+### GitHub Pages
+1. Create a new repository
+2. Upload `index.html` and `styles.css`
+3. Go to Settings → Pages
+4. Select your branch and save
+5. Your site is live at `username.github.io/repo-name`
+
+### Vercel
+1. Push your files to GitHub
+2. Import the repo on [vercel.com](https://vercel.com)
+3. Deploy with default settings
+
+---
+
+## ❓ FAQ
+
+**Q: Do I need to know coding?**
+A: No! Just fill the form and download.
+
+**Q: Can I edit the portfolio after downloading?**
+A: Yes! It's plain HTML/CSS you can edit in any text editor.
+
+**Q: Is it free?**
+A: Yes, completely free and open source.
+
+**Q: Does it work offline?**
+A: Yes, after the initial page load, everything works offline.
+
+**Q: Why do I see a security warning on Windows?**
+A: Windows flags all files downloaded from the internet. Right-click the ZIP → Properties → Check "Unblock" → Apply, then extract.
+
+---
+
+## 📧 Contact
+
+Have questions or feedback?
+
+📩 **Email:** [foliolab.devs@gmail.com](mailto:foliolab.devs@gmail.com)
+
+---
+
+## 📄 License
+
+MIT License – Use it however you want!
+
+---
+
+Built with ❤️ by the FolioLab team
