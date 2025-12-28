@@ -1,0 +1,173 @@
+{
+    "name": "Developer Dark",
+    "version": "1.0.0",
+    "category": "developer",
+    "description": "Modern dark theme for developers with GitHub-style aesthetics",
+    "fields": [
+        {
+            "name": "profileImage",
+            "label": "Profile Photo",
+            "type": "image",
+            "section": "Personal Info"
+        },
+        {
+            "name": "fullName",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "Alex Developer",
+            "required": true,
+            "section": "Personal Info"
+        },
+        {
+            "name": "username",
+            "label": "Username / Handle",
+            "type": "text",
+            "placeholder": "@alexdev",
+            "section": "Personal Info"
+        },
+        {
+            "name": "title",
+            "label": "Title",
+            "type": "text",
+            "placeholder": "Full Stack Developer",
+            "required": true,
+            "section": "Personal Info"
+        },
+        {
+            "name": "location",
+            "label": "Location",
+            "type": "text",
+            "placeholder": "San Francisco, CA",
+            "section": "Personal Info"
+        },
+        {
+            "name": "bio",
+            "label": "Bio",
+            "type": "textarea",
+            "placeholder": "Passionate about building scalable applications...",
+            "section": "Personal Info"
+        },
+        {
+            "name": "email",
+            "label": "Email",
+            "type": "email",
+            "placeholder": "alex@example.com",
+            "required": true,
+            "section": "Contact"
+        },
+        {
+            "name": "github",
+            "label": "GitHub URL",
+            "type": "url",
+            "placeholder": "https://github.com/username",
+            "section": "Contact"
+        },
+        {
+            "name": "linkedin",
+            "label": "LinkedIn URL",
+            "type": "url",
+            "placeholder": "https://linkedin.com/in/username",
+            "section": "Contact"
+        },
+        {
+            "name": "twitter",
+            "label": "Twitter URL",
+            "type": "url",
+            "placeholder": "https://twitter.com/username",
+            "section": "Contact"
+        },
+        {
+            "name": "skills",
+            "label": "Skills",
+            "type": "repeater",
+            "itemLabel": "Skill",
+            "section": "Skills",
+            "fields": [
+                {
+                    "name": "name",
+                    "label": "Skill Name",
+                    "type": "text",
+                    "placeholder": "JavaScript"
+                },
+                {
+                    "name": "level",
+                    "label": "Level",
+                    "type": "text",
+                    "placeholder": "Advanced"
+                }
+            ]
+        },
+        {
+            "name": "projects",
+            "label": "Projects",
+            "type": "repeater",
+            "itemLabel": "Project",
+            "section": "Projects",
+            "fields": [
+                {
+                    "name": "name",
+                    "label": "Project Name",
+                    "type": "text",
+                    "placeholder": "Awesome Project"
+                },
+                {
+                    "name": "description",
+                    "label": "Description",
+                    "type": "textarea",
+                    "placeholder": "What does it do..."
+                },
+                {
+                    "name": "tech",
+                    "label": "Technologies",
+                    "type": "text",
+                    "placeholder": "React, Node.js, PostgreSQL"
+                },
+                {
+                    "name": "github",
+                    "label": "GitHub Link",
+                    "type": "url",
+                    "placeholder": "https://github.com/..."
+                },
+                {
+                    "name": "live",
+                    "label": "Live Demo",
+                    "type": "url",
+                    "placeholder": "https://..."
+                }
+            ]
+        },
+        {
+            "name": "experience",
+            "label": "Experience",
+            "type": "repeater",
+            "itemLabel": "Position",
+            "section": "Experience",
+            "fields": [
+                {
+                    "name": "role",
+                    "label": "Job Title",
+                    "type": "text",
+                    "placeholder": "Senior Developer"
+                },
+                {
+                    "name": "company",
+                    "label": "Company",
+                    "type": "text",
+                    "placeholder": "Tech Corp"
+                },
+                {
+                    "name": "period",
+                    "label": "Period",
+                    "type": "text",
+                    "placeholder": "2022 - Present"
+                },
+                {
+                    "name": "description",
+                    "label": "Description",
+                    "type": "textarea",
+                    "placeholder": "What you did..."
+                }
+            ]
+        }
+    ]
+}

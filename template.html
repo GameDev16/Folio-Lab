@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a Template – FolioLab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/logo.png" alt="FolioLab" class="nav__logo-img">
+                <span class="nav__logo-text">FolioLab</span>
+            </a>
+            <div class="nav__links">
+                <a href="index.html" class="nav__link nav__link--back">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header__container">
+            <h1 class="page-header__title">Choose your template</h1>
+            <p class="page-header__subtitle">Pick a design that matches your style. Every template is fully customizable.</p>
+            
+            <!-- Search Box -->
+            <div class="search-box">
+                <svg class="search-box__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                </svg>
+                <input type="text" class="search-box__input" id="searchInput" placeholder="Search templates...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Filter -->
+    <section class="template-categories">
+        <div class="template-categories__container">
+            <button class="category-btn active" data-category="all">All Templates</button>
+            <button class="category-btn" data-category="student">Student</button>
+            <button class="category-btn" data-category="developer">Developer</button>
+            <button class="category-btn" data-category="designer">Designer</button>
+            <button class="category-btn" data-category="multipurpose">Multipurpose</button>
+        </div>
+    </section>
+
+    <!-- Template Grid -->
+    <section class="template-grid">
+        <div class="template-grid__container" id="templateGrid">
+            <!-- Templates will be dynamically loaded -->
+        </div>
+    </section>
+
+    <!-- Preview Modal -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-modal__content preview-modal__content--large">
+            <div class="preview-modal__header">
+                <h3 class="preview-modal__title" id="previewTemplateName">Template Preview</h3>
+                <button class="preview-modal__close" id="closePreviewModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="preview-modal__body">
+                <div class="preview-frame" id="previewFrame">
+                    <iframe class="preview-iframe" id="previewIframe" sandbox="allow-same-origin"></iframe>
+                </div>
+            </div>
+            <div class="preview-modal__actions">
+                <button class="btn btn--secondary btn--md" id="closePreviewModalBtn" onclick="closePreviewModal()">Close</button>
+                <a href="#" class="btn btn--primary btn--md" id="useTemplateBtn">
+                    Use This Template
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <img src="assets/logo.png" alt="FolioLab" class="footer__logo-img">
+                <span>FolioLab</span>
+            </div>
+            <p class="footer__text">A simpler way to stand out.</p>
+        </div>
+    </footer>
+
+    <script src="js/templates.js"></script>
+    <script src="js/template-data.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

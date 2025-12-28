@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{fullName}} | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-inner">
+            <div class="brand">
+                <div class="brand-tag">PORTFOLIO</div>
+                <h1 class="brand-name">{{fullName}}</h1>
+                <p class="brand-role">{{tagline}}</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#intro" class="nav-link">Intro</a>
+                <a href="#journey" class="nav-link">Journey</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#stack" class="nav-link">Tech Stack</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="sidebar-meta">
+                {{#location}}<p class="meta-item">📍 {{location}}</p>{{/location}}
+                {{#dob}}<p class="meta-item">🎂 {{dob}}</p>{{/dob}}
+            </div>
+
+            <div class="sidebar-links">
+                {{#github}}<a href="{{github}}" target="_blank" class="social-link">GitHub ↗</a>{{/github}}
+                {{#linkedin}}<a href="{{linkedin}}" target="_blank" class="social-link">LinkedIn ↗</a>{{/linkedin}}
+                {{#email}}<a href="mailto:{{email}}" class="social-link">Email ↗</a>{{/email}}
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <section id="intro" class="section intro">
+            <div class="intro-top">
+                <div class="intro-copy">
+                    {{#currentlyLearning}}
+                    <div class="intro-header">
+                        <span class="label-pill">Currently learning</span>
+                        <span class="label-text">{{currentlyLearning}}</span>
+                    </div>
+                    {{/currentlyLearning}}
+                    <h2 class="intro-title">{{headline}}</h2>
+                    <p class="intro-text">{{bio}}</p>
+                </div>
+                <div class="intro-photo">
+                    <img src="{{profileImage}}" alt="{{fullName}}">
+                </div>
+            </div>
+
+            <div class="intro-grid">
+                {{#currentWork}}
+                <div class="intro-card">
+                    <h3>What I'm doing right now</h3>
+                    <ul>
+                        {{#currentWork}}
+                        <li>{{activity}}</li>
+                        {{/currentWork}}
+                    </ul>
+                </div>
+                {{/currentWork}}
+                {{#lookingFor}}
+                <div class="intro-card">
+                    <h3>What I'm looking for</h3>
+                    <ul>
+                        {{#lookingFor}}
+                        <li>{{goal}}</li>
+                        {{/lookingFor}}
+                    </ul>
+                </div>
+                {{/lookingFor}}
+            </div>
+        </section>
+
+        <section id="journey" class="section">
+            <div class="section-heading">
+                <h2>Education & Journey</h2>
+                <p>My learning timeline</p>
+            </div>
+
+            <div class="timeline">
+                {{#education}}
+                <article class="timeline-item">
+                    <header>
+                        <div class="timeline-year">{{startYear}} - {{endYear}}</div>
+                        <div class="timeline-tag">{{institution}}</div>
+                    </header>
+                    <p class="timeline-role">{{degree}}</p>
+                    {{#description}}<p class="timeline-text">{{description}}</p>{{/description}}
+                </article>
+                {{/education}}
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-heading">
+                <h2>Selected Projects</h2>
+                <p>Things I've built</p>
+            </div>
+
+            <div class="projects-grid">
+                {{#projects}}
+                <article class="project">
+                    <div class="project-header">
+                        <h3>{{name}}</h3>
+                        {{#tech}}<span class="project-tag">{{tech}}</span>{{/tech}}
+                    </div>
+                    <p class="project-text">{{description}}</p>
+                    <div class="project-footer">
+                        {{#techStack}}<span class="project-tech">{{techStack}}</span>{{/techStack}}
+                        {{#githubLink}}<a href="{{githubLink}}" target="_blank" class="project-link">View on GitHub ↗</a>{{/githubLink}}
+                    </div>
+                </article>
+                {{/projects}}
+            </div>
+        </section>
+
+        <section id="stack" class="section">
+            <div class="section-heading">
+                <h2>Tech Stack</h2>
+                <p>Tools I actually use</p>
+            </div>
+
+            <div class="stack-grid">
+                <div class="stack-column">
+                    <h3>Skills</h3>
+                    <ul>
+                        {{#skills}}
+                        <li>{{name}}</li>
+                        {{/skills}}
+                    </ul>
+                </div>
+                <div class="stack-column">
+                    <h3>Tools</h3>
+                    <ul>
+                        {{#tools}}
+                        <li>{{name}}</li>
+                        {{/tools}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-contact">
+            <div class="section-heading">
+                <h2>Let's Talk</h2>
+                <p>Want to work together?</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    {{#contactMessage}}<p>{{contactMessage}}</p>{{/contactMessage}}
+                    <ul>
+                        {{#email}}<li><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></li>{{/email}}
+                        {{#github}}<li><strong>GitHub:</strong> <a href="{{github}}" target="_blank">{{githubUsername}}</a></li>{{/github}}
+                        {{#linkedin}}<li><strong>LinkedIn:</strong> <a href="{{linkedin}}" target="_blank">{{linkedinUsername}}</a></li>{{/linkedin}}
+                    </ul>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <span>Built with FolioLab</span>
+            </footer>
+        </section>
+    </main>
+</div>
+</body>
+</html>

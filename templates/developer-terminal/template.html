@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{fullName}} | Terminal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="terminal">
+    <div class="terminal-header">
+        <div class="terminal-buttons">
+            <span class="btn-close"></span>
+            <span class="btn-minimize"></span>
+            <span class="btn-maximize"></span>
+        </div>
+        <div class="terminal-title">{{fullName}} — portfolio</div>
+    </div>
+
+    <div class="terminal-body">
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="ascii-border">
+                    <img src="{{profileImage}}" alt="{{fullName}}" class="profile-image">
+                </div>
+                <p class="profile-name">{{fullName}}</p>
+                {{#handle}}<p class="profile-handle">{{handle}}</p>{{/handle}}
+                {{#title}}<p class="profile-title">{{title}}</p>{{/title}}
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#about" class="nav-link">$ cat about.txt</a>
+                <a href="#skills" class="nav-link">$ ls skills/</a>
+                <a href="#projects" class="nav-link">$ ls projects/</a>
+                <a href="#education" class="nav-link">$ cat education.txt</a>
+                <a href="#contact" class="nav-link">$ cat contact.txt</a>
+            </nav>
+
+            <div class="sidebar-info">
+                {{#location}}<p>location: {{location}}</p>{{/location}}
+                {{#dob}}<p>dob: {{dob}}</p>{{/dob}}
+                {{#email}}<p>email: <a href="mailto:{{email}}">{{email}}</a></p>{{/email}}
+                {{#github}}<p>github: <a href="{{github}}" target="_blank">{{githubUsername}}</a></p>{{/github}}
+                {{#linkedin}}<p>linkedin: <a href="{{linkedin}}" target="_blank">{{linkedinUsername}}</a></p>{{/linkedin}}
+            </div>
+        </aside>
+
+        <main class="main">
+            <section id="about" class="section">
+                <div class="command">$ cat about.txt</div>
+                <div class="output">
+                    <p>{{bio}}</p>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <div class="command">$ ls -la ./skills/</div>
+                <div class="output">
+                    <div class="skills-section">
+                        <p class="dir-header">drwxr-xr-x  skills/</p>
+                        {{#skills}}
+                        <p class="file-item">-rw-r--r--  {{name}}</p>
+                        {{/skills}}
+                    </div>
+                    <div class="skills-section">
+                        <p class="dir-header">drwxr-xr-x  tools/</p>
+                        {{#tools}}
+                        <p class="file-item">-rw-r--r--  {{name}}</p>
+                        {{/tools}}
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <div class="command">$ ls -la ./projects/</div>
+                <div class="output">
+                    {{#projects}}
+                    <div class="project-item">
+                        <p class="project-name">drwxr-xr-x  {{name}}/</p>
+                        <p class="project-desc">{{description}}</p>
+                        {{#tech}}<p class="project-tech">tech: {{tech}}</p>{{/tech}}
+                        {{#githubLink}}<p class="project-link">repo: <a href="{{githubLink}}" target="_blank">{{githubLink}}</a></p>{{/githubLink}}
+                    </div>
+                    {{/projects}}
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <div class="command">$ cat education.txt</div>
+                <div class="output">
+                    {{#education}}
+                    <div class="edu-item">
+                        <p class="edu-period">[{{startYear}} - {{endYear}}]</p>
+                        <p class="edu-degree">{{degree}}</p>
+                        <p class="edu-institution">@ {{institution}}</p>
+                        {{#description}}<p class="edu-desc">{{description}}</p>{{/description}}
+                    </div>
+                    {{/education}}
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <div class="command">$ cat contact.txt</div>
+                <div class="output">
+                    {{#contactMessage}}<p>{{contactMessage}}</p>{{/contactMessage}}
+                    <br>
+                    {{#email}}<p>email: <a href="mailto:{{email}}">{{email}}</a></p>{{/email}}
+                    {{#github}}<p>github: <a href="{{github}}" target="_blank">{{githubUsername}}</a></p>{{/github}}
+                    {{#linkedin}}<p>linkedin: <a href="{{linkedin}}" target="_blank">{{linkedinUsername}}</a></p>{{/linkedin}}
+                </div>
+            </section>
+
+            <footer class="footer">
+                <span>$ echo "Built with FolioLab"</span>
+            </footer>
+        </main>
+    </div>
+</div>
+</body>
+</html>

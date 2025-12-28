@@ -1,0 +1,30 @@
+{
+    "name": "Student Sidebar",
+    "version": "1.0.0",
+    "category": "student",
+    "description": "Clean sidebar layout with blue accents for students",
+    "fields": [
+        {"name": "profileImage", "label": "Profile Photo", "type": "image", "section": "Personal"},
+        {"name": "fullName", "label": "Full Name", "type": "text", "required": true, "section": "Personal"},
+        {"name": "tagline", "label": "Tagline", "type": "text", "placeholder": "CS Student · Developer", "section": "Personal"},
+        {"name": "location", "label": "Location", "type": "text", "section": "Personal"},
+        {"name": "bio", "label": "About Me", "type": "textarea", "section": "Personal"},
+        {"name": "email", "label": "Email", "type": "email", "required": true, "section": "Contact"},
+        {"name": "github", "label": "GitHub", "type": "url", "section": "Contact"},
+        {"name": "linkedin", "label": "LinkedIn", "type": "url", "section": "Contact"},
+        {"name": "skills", "label": "Skills", "type": "repeater", "itemLabel": "Skill", "section": "Skills", "fields": [{"name": "name", "label": "Skill", "type": "text"}]},
+        {"name": "projects", "label": "Projects", "type": "repeater", "itemLabel": "Project", "section": "Projects", "fields": [
+            {"name": "name", "label": "Name", "type": "text"},
+            {"name": "tech", "label": "Technologies", "type": "text"},
+            {"name": "description", "label": "Description", "type": "textarea"},
+            {"name": "github", "label": "GitHub", "type": "url"},
+            {"name": "demo", "label": "Demo", "type": "url"}
+        ]},
+        {"name": "education", "label": "Education", "type": "repeater", "itemLabel": "Education", "section": "Education", "required": true, "fields": [
+            {"name": "course", "label": "Course", "type": "text"},
+            {"name": "institution", "label": "Institution", "type": "text"},
+            {"name": "period", "label": "Period", "type": "text"},
+            {"name": "description", "label": "Description", "type": "textarea"}
+        ]}
+    ]
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{fullName}} | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-inner">
+            <div class="profile">
+                <img src="{{profileImage}}" alt="{{fullName}}" class="profile-image">
+                <h1 class="profile-name">{{fullName}}</h1>
+                {{#title}}<p class="profile-title">{{title}}</p>{{/title}}
+                {{#tagline}}<p class="profile-tagline">{{tagline}}</p>{{/tagline}}
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="sidebar-info">
+                {{#location}}<p class="info-item">📍 {{location}}</p>{{/location}}
+                {{#dob}}<p class="info-item">🎂 {{dob}}</p>{{/dob}}
+                {{#email}}<p class="info-item">✉️ {{email}}</p>{{/email}}
+            </div>
+
+            <div class="sidebar-social">
+                {{#linkedin}}<a href="{{linkedin}}" target="_blank" class="social-link">LinkedIn ↗</a>{{/linkedin}}
+                {{#website}}<a href="{{website}}" target="_blank" class="social-link">Website ↗</a>{{/website}}
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">{{bio}}</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skills-column">
+                    <h3>Skills</h3>
+                    <div class="skills-list">
+                        {{#skills}}
+                        <span class="skill-tag">{{name}}</span>
+                        {{/skills}}
+                    </div>
+                </div>
+                <div class="skills-column">
+                    <h3>Tools</h3>
+                    <div class="skills-list">
+                        {{#tools}}
+                        <span class="skill-tag">{{name}}</span>
+                        {{/tools}}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section">
+            <h2 class="section-title">Work & Projects</h2>
+            <div class="projects-grid">
+                {{#projects}}
+                <div class="project-card">
+                    {{#category}}<span class="project-category">{{category}}</span>{{/category}}
+                    <h3 class="project-name">{{name}}</h3>
+                    <p class="project-description">{{description}}</p>
+                </div>
+                {{/projects}}
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-list">
+                {{#experience}}
+                <div class="experience-item">
+                    {{#period}}<span class="experience-period">{{period}}</span>{{/period}}
+                    <h3 class="experience-role">{{role}}</h3>
+                    {{#organization}}<p class="experience-org">{{organization}}</p>{{/organization}}
+                    {{#description}}<p class="experience-description">{{description}}</p>{{/description}}
+                </div>
+                {{/experience}}
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-list">
+                {{#education}}
+                <div class="education-item">
+                    <span class="education-year">{{startYear}} - {{endYear}}</span>
+                    <h3 class="education-degree">{{degree}}</h3>
+                    <p class="education-institution">{{institution}}</p>
+                    {{#description}}<p class="education-description">{{description}}</p>{{/description}}
+                </div>
+                {{/education}}
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                {{#contactMessage}}<p class="contact-message">{{contactMessage}}</p>{{/contactMessage}}
+                <div class="contact-details">
+                    {{#email}}<p>Email: <a href="mailto:{{email}}">{{email}}</a></p>{{/email}}
+                    {{#phone}}<p>Phone: {{phone}}</p>{{/phone}}
+                    {{#linkedin}}<p>LinkedIn: <a href="{{linkedin}}" target="_blank">{{linkedinUsername}}</a></p>{{/linkedin}}
+                    {{#website}}<p>Website: <a href="{{website}}" target="_blank">{{website}}</a></p>{{/website}}
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span>Built with FolioLab</span>
+        </footer>
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+{
+    "name": "Designer Studio",
+    "version": "1.0.0",
+    "category": "designer",
+    "description": "Elegant sidebar layout for creative professionals",
+    "fields": [
+        {
+            "name": "profileImage",
+            "label": "Profile Photo",
+            "type": "image",
+            "section": "Personal Info"
+        },
+        {
+            "name": "fullName",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "Maya Chen",
+            "required": true,
+            "section": "Personal Info"
+        },
+        {
+            "name": "title",
+            "label": "Title",
+            "type": "text",
+            "placeholder": "Creative Director",
+            "required": true,
+            "section": "Personal Info"
+        },
+        {
+            "name": "tagline",
+            "label": "Tagline",
+            "type": "text",
+            "placeholder": "Crafting visual stories that inspire",
+            "section": "Personal Info"
+        },
+        {
+            "name": "location",
+            "label": "Location",
+            "type": "text",
+            "placeholder": "New York, NY",
+            "section": "Personal Info"
+        },
+        {
+            "name": "bio",
+            "label": "About",
+            "type": "textarea",
+            "placeholder": "Your creative journey...",
+            "section": "Personal Info"
+        },
+        {
+            "name": "email",
+            "label": "Email",
+            "type": "email",
+            "placeholder": "hello@example.com",
+            "required": true,
+            "section": "Contact"
+        },
+        {
+            "name": "instagram",
+            "label": "Instagram",
+            "type": "url",
+            "placeholder": "https://instagram.com/...",
+            "section": "Contact"
+        },
+        {
+            "name": "dribbble",
+            "label": "Dribbble",
+            "type": "url",
+            "placeholder": "https://dribbble.com/...",
+            "section": "Contact"
+        },
+        {
+            "name": "linkedin",
+            "label": "LinkedIn",
+            "type": "url",
+            "placeholder": "https://linkedin.com/in/...",
+            "section": "Contact"
+        },
+        {
+            "name": "expertise",
+            "label": "Areas of Expertise",
+            "type": "repeater",
+            "itemLabel": "Expertise",
+            "section": "Expertise",
+            "fields": [
+                {
+                    "name": "area",
+                    "label": "Area",
+                    "type": "text",
+                    "placeholder": "Brand Identity"
+                }
+            ]
+        },
+        {
+            "name": "tools",
+            "label": "Tools I Use",
+            "type": "repeater",
+            "itemLabel": "Tool",
+            "section": "Tools",
+            "fields": [
+                {
+                    "name": "tool",
+                    "label": "Tool",
+                    "type": "text",
+                    "placeholder": "Figma"
+                }
+            ]
+        },
+        {
+            "name": "projects",
+            "label": "Projects",
+            "type": "repeater",
+            "itemLabel": "Project",
+            "section": "Work",
+            "fields": [
+                {
+                    "name": "name",
+                    "label": "Project Name",
+                    "type": "text",
+                    "placeholder": "Brand Redesign"
+                },
+                {
+                    "name": "category",
+                    "label": "Category",
+                    "type": "text",
+                    "placeholder": "Branding"
+                },
+                {
+                    "name": "description",
+                    "label": "Description",
+                    "type": "textarea",
+                    "placeholder": "Project details..."
+                },
+                {
+                    "name": "link",
+                    "label": "Project Link",
+                    "type": "url",
+                    "placeholder": "https://..."
+                }
+            ]
+        },
+        {
+            "name": "education",
+            "label": "Education",
+            "type": "repeater",
+            "itemLabel": "Education",
+            "section": "Background",
+            "required": true,
+            "fields": [
+                {
+                    "name": "degree",
+                    "label": "Degree / Course",
+                    "type": "text",
+                    "placeholder": "BFA in Graphic Design"
+                },
+                {
+                    "name": "school",
+                    "label": "School",
+                    "type": "text",
+                    "placeholder": "RISD"
+                },
+                {
+                    "name": "year",
+                    "label": "Year",
+                    "type": "text",
+                    "placeholder": "2018 - 2022"
+                }
+            ]
+        }
+    ]
+}

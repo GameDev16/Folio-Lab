@@ -1,0 +1,249 @@
+{
+    "name": "Student Starter",
+    "version": "1.0.0",
+    "category": "student",
+    "description": "Perfect for students and freshers with sidebar navigation",
+    "fields": [
+        {
+            "name": "profileImage",
+            "label": "Profile Photo",
+            "type": "image",
+            "section": "Personal Info",
+            "hint": "Square photo works best"
+        },
+        {
+            "name": "fullName",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "Your Name",
+            "required": true,
+            "section": "Personal Info"
+        },
+        {
+            "name": "tagline",
+            "label": "Tagline (short skills)",
+            "type": "text",
+            "placeholder": "Java · DSA · Web",
+            "section": "Personal Info",
+            "hint": "Use · to separate skills"
+        },
+        {
+            "name": "location",
+            "label": "Location",
+            "type": "text",
+            "placeholder": "Mumbai, India",
+            "section": "Personal Info"
+        },
+        {
+            "name": "email",
+            "label": "Email",
+            "type": "email",
+            "placeholder": "you@example.com",
+            "required": true,
+            "section": "Contact"
+        },
+        {
+            "name": "github",
+            "label": "GitHub URL",
+            "type": "url",
+            "placeholder": "https://github.com/username",
+            "section": "Contact"
+        },
+        {
+            "name": "linkedin",
+            "label": "LinkedIn URL",
+            "type": "url",
+            "placeholder": "https://linkedin.com/in/username",
+            "section": "Contact"
+        },
+        {
+            "name": "currentlyLearning",
+            "label": "Currently Learning",
+            "type": "text",
+            "placeholder": "Advanced Java · DSA · Web basics",
+            "section": "Intro"
+        },
+        {
+            "name": "headline",
+            "label": "Intro Headline",
+            "type": "text",
+            "placeholder": "I write clear, practical code and I'm building a solid CS foundation.",
+            "section": "Intro",
+            "required": true
+        },
+        {
+            "name": "bio",
+            "label": "About Me",
+            "type": "textarea",
+            "placeholder": "I'm a student focused on...",
+            "section": "Intro"
+        },
+        {
+            "name": "currentWork",
+            "label": "What I'm Doing Now",
+            "type": "repeater",
+            "itemLabel": "Activity",
+            "section": "Intro",
+            "fields": [
+                {
+                    "name": "activity",
+                    "label": "Activity",
+                    "type": "text",
+                    "placeholder": "Learning core DSA concepts"
+                }
+            ]
+        },
+        {
+            "name": "lookingFor",
+            "label": "What I'm Looking For",
+            "type": "repeater",
+            "itemLabel": "Goal",
+            "section": "Intro",
+            "fields": [
+                {
+                    "name": "goal",
+                    "label": "Goal",
+                    "type": "text",
+                    "placeholder": "Internships in backend development"
+                }
+            ]
+        },
+        {
+            "name": "education",
+            "label": "Education",
+            "type": "repeater",
+            "itemLabel": "Education",
+            "section": "Education & Journey",
+            "required": true,
+            "fields": [
+                {
+                    "name": "period",
+                    "label": "Time Period",
+                    "type": "text",
+                    "placeholder": "2024 - Present"
+                },
+                {
+                    "name": "institution",
+                    "label": "Institution / Type",
+                    "type": "text",
+                    "placeholder": "MCA · College Name"
+                },
+                {
+                    "name": "role",
+                    "label": "Course / Focus",
+                    "type": "text",
+                    "placeholder": "MCA Student (Java-focused)"
+                },
+                {
+                    "name": "description",
+                    "label": "Description",
+                    "type": "textarea",
+                    "placeholder": "What you learned or achieved..."
+                }
+            ]
+        },
+        {
+            "name": "projects",
+            "label": "Projects",
+            "type": "repeater",
+            "itemLabel": "Project",
+            "section": "Projects",
+            "fields": [
+                {
+                    "name": "name",
+                    "label": "Project Name",
+                    "type": "text",
+                    "placeholder": "Contact Management System"
+                },
+                {
+                    "name": "tech",
+                    "label": "Technologies",
+                    "type": "text",
+                    "placeholder": "Python · GUI · CRUD"
+                },
+                {
+                    "name": "description",
+                    "label": "Description",
+                    "type": "textarea",
+                    "placeholder": "What the project does..."
+                },
+                {
+                    "name": "features",
+                    "label": "Key Features (one per line)",
+                    "type": "textarea",
+                    "placeholder": "Feature 1\nFeature 2\nFeature 3"
+                },
+                {
+                    "name": "techStack",
+                    "label": "Tech Stack Used",
+                    "type": "text",
+                    "placeholder": "Python, Tkinter, SQL"
+                },
+                {
+                    "name": "githubLink",
+                    "label": "GitHub Link",
+                    "type": "url",
+                    "placeholder": "https://github.com/..."
+                },
+                {
+                    "name": "liveLink",
+                    "label": "Live Demo / Docs Link",
+                    "type": "url",
+                    "placeholder": "https://..."
+                }
+            ]
+        },
+        {
+            "name": "skillsCore",
+            "label": "Core Skills",
+            "type": "repeater",
+            "itemLabel": "Skill",
+            "section": "Tech Stack",
+            "fields": [
+                {
+                    "name": "skill",
+                    "label": "Skill",
+                    "type": "text",
+                    "placeholder": "Java (OOP, basic DSA)"
+                }
+            ]
+        },
+        {
+            "name": "skillsConcepts",
+            "label": "Concepts",
+            "type": "repeater",
+            "itemLabel": "Concept",
+            "section": "Tech Stack",
+            "fields": [
+                {
+                    "name": "concept",
+                    "label": "Concept",
+                    "type": "text",
+                    "placeholder": "Time & space complexity"
+                }
+            ]
+        },
+        {
+            "name": "skillsTools",
+            "label": "Tools",
+            "type": "repeater",
+            "itemLabel": "Tool",
+            "section": "Tech Stack",
+            "fields": [
+                {
+                    "name": "tool",
+                    "label": "Tool",
+                    "type": "text",
+                    "placeholder": "Git & GitHub"
+                }
+            ]
+        },
+        {
+            "name": "contactMessage",
+            "label": "Contact Message",
+            "type": "textarea",
+            "placeholder": "I'm open to internships, freelance work...",
+            "section": "Contact"
+        }
+    ]
+}

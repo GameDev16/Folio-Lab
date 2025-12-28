@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Portfolio – FolioLab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/logo.png" alt="FolioLab" class="nav__logo-img">
+                <span class="nav__logo-text">FolioLab</span>
+            </a>
+            <div class="nav__links">
+                <a href="template.html" class="nav__link nav__link--back">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Templates
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Builder Layout -->
+    <div class="builder-page">
+        <div class="builder-form-panel">
+            <form class="builder-form" id="builderForm">
+                <div class="builder-form__header">
+                    <span class="builder-form__template-name" id="templateName">Loading...</span>
+                    <h1 class="builder-form__title">Build your portfolio</h1>
+                    <p class="builder-form__subtitle">Fill in your details below. Your progress is saved automatically.</p>
+                </div>
+
+                <!-- Dynamic Form Content -->
+                <div id="formContent">
+                    <div style="text-align: center; padding: 3rem;">
+                        <div class="loading-spinner" style="margin: 0 auto;"></div>
+                        <p style="margin-top: 1rem; color: var(--color-text-muted);">Loading form fields...</p>
+                    </div>
+                </div>
+
+                <!-- Builder Actions -->
+                <div class="builder-actions">
+                    <button type="button" class="btn btn--ghost btn--md" id="resetBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                            <path d="M3 3v5h5"/>
+                        </svg>
+                        Reset
+                    </button>
+                    <button type="button" class="btn btn--secondary btn--md" id="previewBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                        Preview
+                    </button>
+                    <button type="button" class="btn btn--primary btn--md" id="downloadBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download ZIP
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-modal__content preview-modal__content--large">
+            <div class="preview-modal__header">
+                <h3 class="preview-modal__title">Preview</h3>
+                <button class="preview-modal__close" id="closePreviewModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="preview-modal__body">
+                <div class="preview-frame" id="previewFrame">
+                    <iframe class="preview-iframe" id="previewIframe"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reset Confirm Modal -->
+    <div class="confirm-modal" id="resetModal">
+        <div class="confirm-modal__content">
+            <h3 class="confirm-modal__title">Reset Form?</h3>
+            <p class="confirm-modal__text">This will clear all your entered data. This action cannot be undone.</p>
+            <div class="confirm-modal__actions">
+                <button class="btn btn--secondary btn--md" id="cancelReset">Cancel</button>
+                <button class="btn btn--danger btn--md" id="confirmReset">Reset All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- JSZip Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="js/templates.js"></script>
+    <script src="js/template-data.js"></script>
+    <script src="js/builder.js"></script>
+</body>
+</html>

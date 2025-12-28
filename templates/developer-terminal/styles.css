@@ -1,0 +1,347 @@
+/* Developer Terminal - Retro Green Theme */
+:root {
+    --bg: #0c0c0c;
+    --bg-light: #1a1a1a;
+    --green: #00ff00;
+    --green-dim: #00aa00;
+    --green-dark: #006600;
+    --text: #00ff00;
+    --text-dim: #008800;
+    --border: #333;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { 
+    margin: 0; 
+    font-family: "JetBrains Mono", monospace; 
+    background: var(--bg); 
+    color: var(--text); 
+    font-size: 14px;
+    line-height: 1.6;
+}
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.terminal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background: var(--bg-light);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.btn-close { background: #ff5f56; }
+.btn-minimize { background: #ffbd2e; }
+.btn-maximize { background: #27ca40; }
+
+.terminal-title {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+.terminal-body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ascii-border {
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--green);
+    padding: 4px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.2);
+}
+
+.profile-info {
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.prompt {
+    color: var(--green-dim);
+}
+
+.comment {
+    color: var(--text-dim);
+    font-style: italic;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav a {
+    padding: 0.25rem 0;
+    color: var(--text);
+    transition: color 0.15s;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.links a {
+    color: var(--text-dim);
+}
+
+.links a:hover {
+    color: var(--text);
+}
+
+/* Main */
+.main {
+    padding: 2rem 2.5rem;
+    max-width: 800px;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.command {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+.output {
+    padding-left: 1rem;
+    border-left: 2px solid var(--green-dark);
+}
+
+.output p {
+    margin: 0 0 1rem;
+    color: var(--text-dim);
+}
+
+/* Projects */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project {
+    padding: 1rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.file {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.permissions {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+}
+
+.project-desc {
+    color: var(--text-dim);
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tech {
+    color: var(--green-dim);
+    font-size: 0.8rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+/* Experience */
+.exp-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--border);
+}
+
+.exp-item:last-child {
+    border-bottom: none;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.exp-role {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.exp-period {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+.exp-company {
+    color: var(--green-dim);
+    font-size: 0.9rem;
+}
+
+.exp-desc {
+    color: var(--text-dim);
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+}
+
+/* Skills */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill {
+    padding: 0.4rem 0.8rem;
+    background: var(--bg-light);
+    border: 1px solid var(--green-dark);
+    font-size: 0.85rem;
+}
+
+/* Contact */
+.contact-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--green);
+    transition: all 0.2s;
+}
+
+.contact-link:hover {
+    background: var(--green);
+    color: var(--bg);
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+}
+
+/* Social Links */
+.sidebar-links .social-link, .sidebar-social .social-link, .sidebar-contact .social-link {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent, #3b82f6);
+    padding: 0.5rem 0.75rem;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s;
+}
+
+.sidebar-links .social-link:hover, .sidebar-social .social-link:hover, .sidebar-contact .social-link:hover {
+    background: rgba(59, 130, 246, 0.2);
+}
+
+/* Project Links */
+.project-link {
+    font-size: 0.85rem;
+    color: var(--accent, #3b82f6);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Fix overflow */
+.sidebar-info p, .sidebar-meta p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Contact links */
+.contact-details a {
+    color: var(--accent, #3b82f6);
+    word-break: break-all;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{fullName}} | Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-inner">
+            <div class="profile">
+                <img src="{{profileImage}}" alt="{{fullName}}" class="profile-image">
+                <h1 class="profile-name">{{fullName}}</h1>
+                {{#username}}<p class="profile-username">{{username}}</p>{{/username}}
+                {{#title}}<p class="profile-title">{{title}}</p>{{/title}}
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#about" class="nav-link"># About</a>
+                <a href="#skills" class="nav-link"># Skills</a>
+                <a href="#projects" class="nav-link"># Projects</a>
+                <a href="#experience" class="nav-link"># Experience</a>
+                <a href="#education" class="nav-link"># Education</a>
+                <a href="#contact" class="nav-link"># Contact</a>
+            </nav>
+
+            <div class="sidebar-meta">
+                {{#location}}<p class="meta-item">📍 {{location}}</p>{{/location}}
+                {{#dob}}<p class="meta-item">🎂 {{dob}}</p>{{/dob}}
+            </div>
+
+            <div class="sidebar-links">
+                {{#email}}<a href="mailto:{{email}}" class="social-link">Email ↗</a>{{/email}}
+                {{#github}}<a href="{{github}}" target="_blank" class="social-link">GitHub ↗</a>{{/github}}
+                {{#linkedin}}<a href="{{linkedin}}" target="_blank" class="social-link">LinkedIn ↗</a>{{/linkedin}}
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <section id="about" class="section">
+            <h2 class="section-title"># About</h2>
+            <p class="about-text">{{bio}}</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title"># Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-column">
+                    <h3>Technical Skills</h3>
+                    {{#skills}}
+                    <div class="skill-row">
+                        <span class="skill-name">{{name}}</span>
+                        {{#level}}<span class="skill-level">{{level}}</span>{{/level}}
+                    </div>
+                    {{/skills}}
+                </div>
+                <div class="skills-column">
+                    <h3>Tools</h3>
+                    {{#tools}}
+                    <div class="skill-row">
+                        <span class="skill-name">{{name}}</span>
+                    </div>
+                    {{/tools}}
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title"># Projects</h2>
+            <div class="projects-grid">
+                {{#projects}}
+                <div class="project-card">
+                    <h3 class="project-name">{{name}}</h3>
+                    <p class="project-description">{{description}}</p>
+                    {{#tech}}<p class="project-tech">{{tech}}</p>{{/tech}}
+                    {{#githubLink}}<a href="{{githubLink}}" target="_blank" class="project-link">View Repository ↗</a>{{/githubLink}}
+                </div>
+                {{/projects}}
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title"># Experience</h2>
+            <div class="experience-list">
+                {{#experience}}
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="experience-role">{{role}}</h3>
+                        {{#period}}<span class="experience-period">{{period}}</span>{{/period}}
+                    </div>
+                    {{#company}}<p class="experience-company">{{company}}</p>{{/company}}
+                    {{#description}}<p class="experience-description">{{description}}</p>{{/description}}
+                </div>
+                {{/experience}}
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2 class="section-title"># Education</h2>
+            <div class="education-list">
+                {{#education}}
+                <div class="education-item">
+                    <span class="education-period">{{startYear}} - {{endYear}}</span>
+                    <h3 class="education-degree">{{degree}}</h3>
+                    <p class="education-institution">{{institution}}</p>
+                    {{#description}}<p class="education-description">{{description}}</p>{{/description}}
+                </div>
+                {{/education}}
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title"># Contact</h2>
+            <div class="contact-info">
+                {{#contactMessage}}<p>{{contactMessage}}</p>{{/contactMessage}}
+                <div class="contact-details">
+                    {{#email}}<p>Email: <a href="mailto:{{email}}">{{email}}</a></p>{{/email}}
+                    {{#github}}<p>GitHub: <a href="{{github}}" target="_blank">{{githubUsername}}</a></p>{{/github}}
+                    {{#linkedin}}<p>LinkedIn: <a href="{{linkedin}}" target="_blank">{{linkedinUsername}}</a></p>{{/linkedin}}
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span>Built with FolioLab</span>
+        </footer>
+    </main>
+</div>
+</body>
+</html>

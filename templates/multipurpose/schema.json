@@ -1,0 +1,37 @@
+{
+    "name": "Multipurpose",
+    "version": "1.0.0",
+    "category": "multipurpose",
+    "description": "Versatile template that works for any profession",
+    "fields": [
+        {"name": "profileImage", "label": "Profile Photo", "type": "image", "section": "Personal"},
+        {"name": "fullName", "label": "Full Name", "type": "text", "required": true, "section": "Personal"},
+        {"name": "title", "label": "Title / Role", "type": "text", "required": true, "section": "Personal"},
+        {"name": "tagline", "label": "One-line Intro", "type": "text", "section": "Personal"},
+        {"name": "location", "label": "Location", "type": "text", "section": "Personal"},
+        {"name": "bio", "label": "About", "type": "textarea", "section": "Personal"},
+        {"name": "email", "label": "Email", "type": "email", "required": true, "section": "Contact"},
+        {"name": "phone", "label": "Phone", "type": "text", "section": "Contact"},
+        {"name": "website", "label": "Website", "type": "url", "section": "Contact"},
+        {"name": "linkedin", "label": "LinkedIn", "type": "url", "section": "Contact"},
+        {"name": "twitter", "label": "Twitter", "type": "url", "section": "Contact"},
+        {"name": "skills", "label": "Skills / Expertise", "type": "repeater", "itemLabel": "Skill", "section": "Skills", "fields": [{"name": "name", "label": "Skill", "type": "text"}]},
+        {"name": "projects", "label": "Work / Projects", "type": "repeater", "itemLabel": "Project", "section": "Work", "fields": [
+            {"name": "name", "label": "Name", "type": "text"},
+            {"name": "category", "label": "Category", "type": "text"},
+            {"name": "description", "label": "Description", "type": "textarea"},
+            {"name": "link", "label": "Link", "type": "url"}
+        ]},
+        {"name": "experience", "label": "Experience", "type": "repeater", "itemLabel": "Position", "section": "Experience", "fields": [
+            {"name": "role", "label": "Role", "type": "text"},
+            {"name": "organization", "label": "Organization", "type": "text"},
+            {"name": "period", "label": "Period", "type": "text"},
+            {"name": "description", "label": "Description", "type": "textarea"}
+        ]},
+        {"name": "education", "label": "Education", "type": "repeater", "itemLabel": "Education", "section": "Education", "required": true, "fields": [
+            {"name": "degree", "label": "Degree / Certificate", "type": "text"},
+            {"name": "institution", "label": "Institution", "type": "text"},
+            {"name": "year", "label": "Year", "type": "text"}
+        ]}
+    ]
+}

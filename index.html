@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FolioLab – Portfolio Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/logo.png" alt="FolioLab" class="nav__logo-img">
+                <span class="nav__logo-text">FolioLab</span>
+            </a>
+            <div class="nav__links">
+                <a href="template.html" class="btn btn--primary btn--sm">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero hero--compact">
+        <div class="hero__bg">
+            <div class="hero__grid"></div>
+            <div class="hero__glow hero__glow--1"></div>
+            <div class="hero__glow hero__glow--2"></div>
+        </div>
+        <div class="hero__container">
+            <h1 class="hero__title">Build your portfolio<br><span class="hero__title-accent">in minutes.</span></h1>
+            <p class="hero__subtitle">Select a template, fill your details, download a ready-to-host website. No frameworks. No lock-in. You own the code.</p>
+            <div class="hero__actions">
+                <a href="template.html" class="btn btn--primary btn--lg">Get Started <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="#how-it-works" class="btn btn--ghost btn--lg">How it works</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="how-it-works">
+        <div class="features__container">
+            <div class="features__header">
+                <span class="features__label">How it works</span>
+                <h2 class="features__title">Three steps to launch</h2>
+            </div>
+            <div class="features__grid">
+                <div class="feature">
+                    <div class="feature__number">01</div>
+                    <div class="feature__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+                    <h3 class="feature__title">Pick a template</h3>
+                    <p class="feature__desc">Choose from professionally designed templates for developers, designers, and students.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__number">02</div>
+                    <div class="feature__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+                    <h3 class="feature__title">Fill your details</h3>
+                    <p class="feature__desc">Add your name, bio, skills, projects, and contact info through a simple form.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__number">03</div>
+                    <div class="feature__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+                    <h3 class="feature__title">Download & deploy</h3>
+                    <p class="feature__desc">Get a ZIP file with clean HTML/CSS. Host it anywhere – Netlify, Vercel, GitHub Pages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="templates-preview">
+        <div class="templates-preview__container">
+            <div class="templates-preview__header">
+                <span class="templates-preview__label">Ready to use</span>
+                <h2 class="templates-preview__title">Choose your style</h2>
+                <p class="templates-preview__subtitle">Three professionally designed templates for different needs</p>
+            </div>
+            <div class="templates-preview__grid">
+                <div class="template-preview-card">
+                    <div class="template-preview-card__badge">Developer</div>
+                    <div class="template-preview-card__mockup template-preview-card__mockup--developer">
+                        <div class="mockup-dev"><div class="mockup-dev__nav"></div><div class="mockup-dev__hero"><div class="mockup-dev__avatar"></div><div class="mockup-dev__text"></div><div class="mockup-dev__text mockup-dev__text--short"></div></div><div class="mockup-dev__cards"><div class="mockup-dev__card"></div><div class="mockup-dev__card"></div></div></div>
+                    </div>
+                    <h3 class="template-preview-card__title">Developer Pro</h3>
+                    <p class="template-preview-card__desc">Modern dark theme for coders</p>
+                </div>
+                <div class="template-preview-card">
+                    <div class="template-preview-card__badge">Designer</div>
+                    <div class="template-preview-card__mockup template-preview-card__mockup--designer">
+                        <div class="mockup-design"><div class="mockup-design__sidebar"></div><div class="mockup-design__main"></div></div>
+                    </div>
+                    <h3 class="template-preview-card__title">Creative Studio</h3>
+                    <p class="template-preview-card__desc">Sidebar layout for creatives</p>
+                </div>
+                <div class="template-preview-card">
+                    <div class="template-preview-card__badge">Minimal</div>
+                    <div class="template-preview-card__mockup template-preview-card__mockup--minimal">
+                        <div class="mockup-minimal"><div class="mockup-minimal__line mockup-minimal__line--title"></div><div class="mockup-minimal__line"></div><div class="mockup-minimal__line"></div><div class="mockup-minimal__line mockup-minimal__line--short"></div><div class="mockup-minimal__divider"></div><div class="mockup-minimal__line"></div><div class="mockup-minimal__line mockup-minimal__line--short"></div></div>
+                    </div>
+                    <h3 class="template-preview-card__title">Clean Slate</h3>
+                    <p class="template-preview-card__desc">Typography-focused minimal</p>
+                </div>
+            </div>
+            <div class="templates-preview__action">
+                <a href="template.html" class="btn btn--primary btn--lg">View All Templates <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="benefits__container">
+            <div class="benefits__grid">
+                <div class="benefits__content">
+                    <span class="benefits__label">Why FolioLab?</span>
+                    <h2 class="benefits__title">Your portfolio,<br>your rules.</h2>
+                    <ul class="benefits__list">
+                        <li class="benefits__item"><span class="benefits__check">✓</span><div><strong>Clean, editable code</strong><p>Pure HTML & CSS output you can customize forever.</p></div></li>
+                        <li class="benefits__item"><span class="benefits__check">✓</span><div><strong>No vendor lock-in</strong><p>Host anywhere. Switch hosts anytime. It's yours.</p></div></li>
+                        <li class="benefits__item"><span class="benefits__check">✓</span><div><strong>Lightning fast</strong><p>Static sites load instantly. No database calls.</p></div></li>
+                        <li class="benefits__item"><span class="benefits__check">✓</span><div><strong>Professional designs</strong><p>Templates crafted for developers, designers & students.</p></div></li>
+                    </ul>
+                </div>
+                <div class="benefits__visual">
+                    <div class="code-block">
+                        <div class="code-block__header"><span class="code-block__dot"></span><span class="code-block__dot"></span><span class="code-block__dot"></span><span class="code-block__filename">index.html</span></div>
+                        <pre class="code-block__content"><code><span class="code-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="code-tag">&lt;html&gt;</span>
+<span class="code-tag">&lt;head&gt;</span>
+  <span class="code-tag">&lt;title&gt;</span><span class="code-text">Your Portfolio</span><span class="code-tag">&lt;/title&gt;</span>
+<span class="code-tag">&lt;/head&gt;</span>
+<span class="code-tag">&lt;body&gt;</span>
+  <span class="code-tag">&lt;h1&gt;</span><span class="code-text">{{fullName}}</span><span class="code-tag">&lt;/h1&gt;</span>
+  <span class="code-tag">&lt;p&gt;</span><span class="code-text">{{bio}}</span><span class="code-tag">&lt;/p&gt;</span>
+<span class="code-tag">&lt;/body&gt;</span>
+<span class="code-tag">&lt;/html&gt;</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta__container">
+            <h2 class="cta__title">Ready to build?</h2>
+            <p class="cta__subtitle">Your portfolio is just a few clicks away.</p>
+            <a href="template.html" class="btn btn--primary btn--lg">Choose a Template <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand"><img src="assets/logo.png" alt="FolioLab" class="footer__logo-img"><span>FolioLab</span></div>
+            <p class="footer__text">A simpler way to stand out.</p>
+        </div>
+    </footer>
+</body>
+</html>

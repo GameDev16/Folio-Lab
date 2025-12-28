@@ -1,0 +1,29 @@
+{
+    "name": "Designer Minimal",
+    "version": "1.0.0",
+    "category": "designer",
+    "description": "Clean minimal design with focus on typography",
+    "fields": [
+        {"name": "profileImage", "label": "Profile Photo", "type": "image", "section": "Personal"},
+        {"name": "fullName", "label": "Full Name", "type": "text", "required": true, "section": "Personal"},
+        {"name": "title", "label": "Title", "type": "text", "required": true, "section": "Personal"},
+        {"name": "bio", "label": "Bio", "type": "textarea", "section": "Personal"},
+        {"name": "location", "label": "Location", "type": "text", "section": "Personal"},
+        {"name": "email", "label": "Email", "type": "email", "required": true, "section": "Contact"},
+        {"name": "website", "label": "Website", "type": "url", "section": "Contact"},
+        {"name": "instagram", "label": "Instagram", "type": "url", "section": "Contact"},
+        {"name": "linkedin", "label": "LinkedIn", "type": "url", "section": "Contact"},
+        {"name": "skills", "label": "Skills", "type": "repeater", "itemLabel": "Skill", "section": "Skills", "fields": [{"name": "name", "label": "Skill", "type": "text"}]},
+        {"name": "projects", "label": "Projects", "type": "repeater", "itemLabel": "Project", "section": "Work", "fields": [
+            {"name": "name", "label": "Name", "type": "text"},
+            {"name": "year", "label": "Year", "type": "text"},
+            {"name": "description", "label": "Description", "type": "textarea"},
+            {"name": "link", "label": "Link", "type": "url"}
+        ]},
+        {"name": "education", "label": "Education", "type": "repeater", "itemLabel": "Education", "section": "Education", "required": true, "fields": [
+            {"name": "degree", "label": "Degree", "type": "text"},
+            {"name": "school", "label": "School", "type": "text"},
+            {"name": "year", "label": "Year", "type": "text"}
+        ]}
+    ]
+}

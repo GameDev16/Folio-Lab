@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{fullName}} | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="layout">
+    <header class="header">
+        <div class="header-left">
+            <h1 class="site-name">{{fullName}}</h1>
+            {{#title}}<p class="site-title">{{title}}</p>{{/title}}
+        </div>
+        <nav class="header-nav">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section id="about" class="section section-hero">
+            <div class="hero-content">
+                <img src="{{profileImage}}" alt="{{fullName}}" class="hero-image">
+                <div class="hero-text">
+                    {{#tagline}}<h2 class="hero-title">{{tagline}}</h2>{{/tagline}}
+                    <p class="hero-bio">{{bio}}</p>
+                    <div class="hero-meta">
+                        {{#location}}<p>📍 {{location}}</p>{{/location}}
+                        {{#dob}}<p>🎂 {{dob}}</p>{{/dob}}
+                        {{#email}}<p>✉️ <a href="mailto:{{email}}">{{email}}</a></p>{{/email}}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section">
+            <h2 class="section-title">Selected Work</h2>
+            <div class="work-list">
+                {{#projects}}
+                <div class="work-item">
+                    {{#year}}<span class="work-year">{{year}}</span>{{/year}}
+                    <h3 class="work-name">{{name}}</h3>
+                    <p class="work-description">{{description}}</p>
+                </div>
+                {{/projects}}
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills & Tools</h2>
+            <div class="skills-container">
+                <div class="skills-group">
+                    <h3>Skills</h3>
+                    <div class="skills-list">
+                        {{#skills}}
+                        <span class="skill-tag">{{name}}</span>
+                        {{/skills}}
+                    </div>
+                </div>
+                <div class="skills-group">
+                    <h3>Tools</h3>
+                    <div class="skills-list">
+                        {{#tools}}
+                        <span class="skill-tag">{{name}}</span>
+                        {{/tools}}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-list">
+                {{#education}}
+                <div class="education-item">
+                    <span class="education-year">{{startYear}} - {{endYear}}</span>
+                    <h3 class="education-degree">{{degree}}</h3>
+                    <p class="education-school">{{institution}}</p>
+                </div>
+                {{/education}}
+            </div>
+        </section>
+
+        <section id="contact" class="section section-contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                {{#contactMessage}}<p class="contact-message">{{contactMessage}}</p>{{/contactMessage}}
+                <div class="contact-details">
+                    {{#email}}<p>Email: <a href="mailto:{{email}}">{{email}}</a></p>{{/email}}
+                    {{#linkedin}}<p>LinkedIn: <a href="{{linkedin}}" target="_blank">{{linkedinUsername}}</a></p>{{/linkedin}}
+                    {{#website}}<p>Website: <a href="{{website}}" target="_blank">{{website}}</a></p>{{/website}}
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span>Built with FolioLab</span>
+        </footer>
+    </main>
+</div>
+</body>
+</html>
